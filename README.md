@@ -1,2 +1,2 @@
 # SM-MLC
-Multilabel Classification - Problem analysis, metrics and techniques software and data repository
+*Multilabel Classification - Problem analysis, metrics and techniques* book software and data repository
