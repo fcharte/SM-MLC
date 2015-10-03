@@ -1,5 +1,6 @@
 /*
- * RunMLClassifier.java         July 2012
+ * RunMLClassifier.java         July 2012   Francisco Charte
+ * This software is available under LGPLv3 license
  *
  * Run the selected multi-label classifier using a certain dataset
  *
