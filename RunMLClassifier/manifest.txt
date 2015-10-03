@@ -1,0 +1,3 @@
+Main-Class: RunMLClassifier.Main
+Class-Path: lib/mulan.jar lib/weka.jar
+
