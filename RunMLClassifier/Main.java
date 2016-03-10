@@ -1,5 +1,5 @@
 /*
- * RunMLClassifier.java         July 2012
+ * RunMLClassifier.java         July 2012   
  *
  * Run the selected multi-label classifier using a certain dataset
  *
@@ -9,7 +9,7 @@
  * -dataset     Root name of the dataset, e.g. scene-5x2x1-
  * -folds       Number of folds
  * -algorithm   Algorithm to run
- *              {CLR|MLkNN|BPMLL|IBLR-ML|BR-J48|LP-J48|RAkEL-BR|RAkEL-LP|BR-RBFN|HOMER}
+ *              {CLR|MLkNN|BPMLL|IBLR-ML|BR-J48|LP-J48|RAkEL-BR|RAkEL-LP|BR-RBFN|HOMER|PS-J48|EPS-J48|CC-J48|ECC-J48|BRkNN}
  *
  */
 
@@ -19,9 +19,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 import mulan.classifier.MultiLabelLearner;
 import mulan.classifier.lazy.IBLR_ML;
 import mulan.classifier.lazy.MLkNN;
+import mulan.classifier.lazy.BRkNN;
 import mulan.classifier.meta.HOMER;
 import mulan.classifier.meta.HierarchyBuilder.Method;
 import mulan.classifier.meta.RAkEL;
@@ -29,6 +31,11 @@ import mulan.classifier.neural.BPMLL;
 import mulan.classifier.transformation.BinaryRelevance;
 import mulan.classifier.transformation.CalibratedLabelRanking;
 import mulan.classifier.transformation.LabelPowerset;
+import mulan.classifier.transformation.PrunedSets;
+import mulan.classifier.transformation.PrunedSets.Strategy;
+import mulan.classifier.transformation.EnsembleOfPrunedSets;
+import mulan.classifier.transformation.ClassifierChain;
+import mulan.classifier.transformation.EnsembleOfClassifierChains;
 import mulan.data.MultiLabelInstances;
 import mulan.evaluation.Evaluation;
 import mulan.evaluation.Evaluator;
@@ -55,6 +62,7 @@ import mulan.evaluation.measure.SubsetAccuracy;
 import weka.classifiers.trees.J48;
 import weka.core.Utils;
 
+
 /**
  *
  * @author Francisco Charte
@@ -65,7 +73,7 @@ public class Main {
     private int folds;
     private String root;
     private boolean debug;
-    
+
     /**
      * Application's entry point
      *
@@ -84,6 +92,13 @@ public class Main {
         List<Measure> measures;
         MultiLabelLearner classifier;
         MultipleEvaluation results = new MultipleEvaluation();
+        long tIniTr = 0;
+        long tIniTe = 0;
+        long tTrain = 0;
+        long tTest = 0;
+        long tTotal = 0;
+        long taux = 0;
+        long taux2 = 0;
 
         readParameters(args);
         root = path + File.separator + dataset + "-";
@@ -94,6 +109,7 @@ public class Main {
             measures = getListMeasures(numLabels);
             classifier = getClassifier(numLabels);
 
+
             for(int fold = 1; fold <= folds; fold++) {
                 if(debug) System.out.println("Fold " + fold);
                 MultiLabelInstances
@@ -101,25 +117,34 @@ public class Main {
                         test  = new MultiLabelInstances(root + fold + "tst.arff", xmlfile);
 
                 MultiLabelLearner cls = classifier.makeCopy();
-                cls.build(train);
 
+
+                tIniTr = System.currentTimeMillis();
+
+
+                cls.build(train);
+                taux = System.currentTimeMillis();
+                tTrain = (taux-tIniTr)/1 + tTrain;
+                tIniTe = System.currentTimeMillis();
                 Evaluator evaluator = new Evaluator();
                 Evaluation evaluation;
-
                 evaluation = evaluator.evaluate(cls, test, measures);
-                if(debug) System.out.println(evaluation);
+                taux2 = System.currentTimeMillis();
+                tTest = (taux2-tIniTe)/1 + tTest;
+                tTotal = (taux2-tIniTr)/1 + tTotal;
+                if (debug) System.out.println(evaluation);
                 results.addEvaluation(evaluation);
             }
             results.calculateStatistics();
-            System.out.println(algorithm + "," + dataset + "," + results.toCSV().replace(",", ".").replace(";", ",").replace("\u00B1", ";"));
+            System.out.println(algorithm + "," + dataset + "," + results.toCSV().replace(",", ".").replace(";", ",").replace("\u00B1", ";") + tTrain + "," + tTest + "," + tTotal+ ",");
         } catch(Exception e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Get the classifier to use from the parameters given 
-     * 
+     * Get the classifier to use from the parameters given
+     *
      * @param numLabels Number of labels in the dataset
      * @return MultiLabelLearner with the classifier
      */
@@ -134,6 +159,14 @@ public class Main {
         learnerName.add("RAkEL-LP");
         learnerName.add("RAkEL-BR");
         learnerName.add("HOMER");
+        learnerName.add("PS-J48");
+        learnerName.add("EPS-J48");
+        learnerName.add("CC-J48");
+        learnerName.add("ECC-J48");
+        learnerName.add("BRkNN");
+
+        PrunedSets.Strategy pss= PrunedSets.Strategy.values()[0];
+        //public static final BRkNN.ExtensionType ext = NONE;
 
         MultiLabelLearner[] learner = {
             new CalibratedLabelRanking(new J48()),
@@ -145,7 +178,12 @@ public class Main {
             new RAkEL(new LabelPowerset(new J48())),
             new RAkEL(new BinaryRelevance(new J48())),
             new HOMER(new BinaryRelevance(new J48()),
-                    (numLabels < 4 ? numLabels : 4), Method.Random)
+                    (numLabels < 4 ? numLabels : 4), Method.Random),
+            new PrunedSets(new J48(),2,pss,2),
+            new EnsembleOfPrunedSets(80, 10, 0.2, 2, pss, 2, new J48()),
+            new ClassifierChain(new J48()),
+            new EnsembleOfClassifierChains(new J48(), 10, true, false),
+            new BRkNN(10)
         };
 
         return learner[learnerName.indexOf(algorithm)];
@@ -220,7 +258,7 @@ public class Main {
             e.printStackTrace();
 
             System.out.println("\n\nYou have to specify the following parameters:");
-            System.out.println("\t-path path_to_datasets\n\t-dataset name_root\n\t-folds num_folds\n\t-algorithm {CLR|MLkNN|BPMLL|IBLR-ML|BR-J48|LP-J48|RAkEL-BR|RAkEL-LP|BR-RBFN|HOMER}");
+            System.out.println("\t-path path_to_datasets\n\t-dataset name_root\n\t-folds num_folds\n\t-algorithm {CLR|MLkNN|BPMLL|IBLR-ML|BR-J48|LP-J48|RAkEL-BR|RAkEL-LP|BR-RBFN|HOMER|PS-J48|EPS-J48|CC-J48|ECC-J48|BRkNN}");
         }
     }
 }
