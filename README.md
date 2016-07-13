@@ -1,7 +1,7 @@
 # Multilabel Classification
 ## Problem analysis, metrics and techniques
 
-by Francisco Herrera, Francisco Charte, Antonio J. Rivera, María J. del Jesus
+by [Francisco Herrera](https://scholar.google.es/citations?hl=es&user=HULIk-QAAAAJ&view_op=list_works&sortby=pubdate), [Francisco Charte](https://scholar.google.es/citations?hl=es&user=i8l_80EAAAAJ&view_op=list_works&sortby=pubdate), [Antonio J. Rivera](https://scholar.google.es/citations?hl=es&user=VW2FhqgAAAAJ&view_op=list_works&sortby=pubdate), [María J. del Jesus](https://scholar.google.es/citations?hl=es&user=1n84M0kAAAAJ&view_op=list_works&sortby=pubdate)
 
 [Springer](http://www.springer.com/gp/book/9783319411101), 2016.
 
