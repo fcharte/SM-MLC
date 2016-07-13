@@ -1,5 +1,4 @@
-# Multilabel Classification
-## Problem analysis, metrics and techniques
+<h1>Multilabel Classification</h1> <h3>Problem analysis, metrics and techniques</h3>
 
 by [Francisco Herrera](https://scholar.google.es/citations?hl=es&user=HULIk-QAAAAJ&view_op=list_works&sortby=pubdate), [Francisco Charte](https://scholar.google.es/citations?hl=es&user=i8l_80EAAAAJ&view_op=list_works&sortby=pubdate), [Antonio J. Rivera](https://scholar.google.es/citations?hl=es&user=VW2FhqgAAAAJ&view_op=list_works&sortby=pubdate), [María J. del Jesus](https://scholar.google.es/citations?hl=es&user=1n84M0kAAAAJ&view_op=list_works&sortby=pubdate)
 
