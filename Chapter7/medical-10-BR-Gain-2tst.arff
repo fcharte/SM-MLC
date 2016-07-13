@@ -1,0 +1,871 @@
+@relation 'MEDC: -C 45 -I 0-weka.filters.unsupervised.attribute.Remove-R1-45_MEDC: -C 45 -I 0-weka.filters.unsupervised.attribute.Remove-R46-1494-weka.filters.unsupervised.attribute.Remove-V-R1335,198,1325,736,1345,995,21,1301,621,802,166,494,661,1160,376,1429,1014,140,1084,1194,1299,1199,1339,191,1116,316,346,553,741,598,798,256,1015,440,804,954,1403,898,1303,665,1396,54,72,40,666,574,1052,606,1425,242,214,825,1442,364,1386,1027,519,669,303,885,1266,1067,646,619,1079,1063,1427,460,173,1224,980,990,1272,1445,689,872,1421,411,1426,1334,648,667,1189,658,860,1204,1068,135,717,525,483,795,1047,1118-1119,88,1000,1112,727,537,1111,965,591,830,205,210,1145,1277,293,290,678,268,297,614,847,1244,1187,618,814,358,180,674,1262,356,351,1278,1022,22,414,479,184,762,1257,85,1440,387,359,1322,1355,339,472,363,246,1101,344,1343,819,796,818,484,1333,779,204,1410,1412,1216,1256,788,563,858,685,222,714,1382,1206,732,307,169,1406,158,1172,315,110,178,842,915,1177,623,649,323,1314,463,543,1298,797,869,87,1176,393,1073,1332,155,145,1359,1028,791,572,971,586,1337,1046,485,241,1051,1286,1212,1435,35,1186,1053,445,580,1147,1420,477,833,754,868,960,1215,522,1327,625,567,243,122,281,244,513,148,1447,1344,1195,609,1407,961,1090,873,462,266,655,1142,240,360,1236,1385,215,233,968,1019,190,880,201,288,272,108,467,493,570,1122,1267,1320,639,121,1422,181,966,79,188,1390,700,664,917,282,928,1016,820,766,1392,1380,1324,844,1104,397,1434,1061,125,1384,213,1087,95,1358,334,938,925,1311,454,806,511,399,1371,245,729,1379,560,715,604,559,656,44,515,1109,569,264,304,269,991,964,248,430,452,725,308,381,338,1275,1281,1223,1131,1167,1143,1149,1284,565,853,946,521,78,97,94,926,37,1066,1352,1035,1032,43,496,757,600,758,206,676,699,875,904,878,123,761,113,278,1123,7,1095,1127,592,720,299,1197,651,1155,644,1205,250,626,992,750,1203,931,589,1106,914,1152,274,144,116,813,568,911,156,638,65,688,660,659,922,970,247,1265,74,131,967,1192,130,28,1448,345,1134,1083,283,1228,1321,681,403,480,279,50,280,581,301,310,265,302,1077,890,1315,744,632,612,10,444,1292,529,296,386,1340,578,1020,704,631,828,832,1121,1374,951,1446,1367,226,888,792,1365,1001,893,355,208,1227,535,1370,769,23,1308,940,285,1433,501,229,1082,682,1045,854,826,1107,1432,573,1007,343,1229,1025,1137,133,705,405,1226,897,506,219,905,458,908,1,120,1239,927,668,332,426,505,1361,810,1201,1294,1158,56,587,1010,384,1044,1113,465,839,882,827,105,104,6,1279,5,558,602,1376,1366,588,584,418-419,352,416,1356,510,421,455,1312,749,751,730,740,1211,1210,1130,1217,759,239,634,1377,1381,624,380,722,231,1391,221,993,963,1141,1033,1057,920,1021,1048,981,909,1164,1049,428,566,706,874,1397,154,361,1285,979,1034,554,675,284,989,141,1323,822,636,67,382,817,693,96,132,152,1165,613,1369,1114,1008,322,745,974,948,973,314,949,318,895,415,1342,1136,756,883,26,760,341,726,217,1054,707,1150,856,663,1231,1105,871,164,1005,1313,524,846,420,354,548,886,957,771,1039,1120,25,500,1004,528,737,952,947,1237,735,1233,1055,495,478,490,518,292,298,1360,448,34,391,1081,470-471,327,1064,368,645,999,627,975,1240,227,662,287,53,1362,366,576,1006,1026,1117,783,128,919,807,829,1182,894,734,514,1441,71,921,1329,223,978,516,694,333,398,102,1170,1346,617,1174,1261,1296,1330,9,76,157,262,787,1378,392,912,457,1423,409,73,170,1043,1076,47,171,395,13,212,808,1151,1450-1494'
+
+@attribute turner {0,1}
+@attribute appetite {0,1}
+@attribute transplant {0,1}
+@attribute intraluminal {0,1}
+@attribute unilateral {0,1}
+@attribute present {0,1}
+@attribute 10-year-9-month {0,1}
+@attribute tightness {0,1}
+@attribute generalized {0,1}
+@attribute lymphadenopathy {0,1}
+@attribute airways {0,1}
+@attribute drainage {0,1}
+@attribute hugely {0,1}
+@attribute shortness {0,1}
+@attribute constipation {0,1}
+@attribute woman {0,1}
+@attribute proteinuria {0,1}
+@attribute absent {0,1}
+@attribute remaining {0,1}
+@attribute solitary {0,1}
+@attribute throat {0,1}
+@attribute sore {0,1}
+@attribute ultrasound; {0,1}
+@attribute ap {0,1}
+@attribute reveal {0,1}
+@attribute chest {0,1}
+@attribute comparative {0,1}
+@attribute extending {0,1}
+@attribute intussusception {0,1}
+@attribute food {0,1}
+@attribute lunch {0,1}
+@attribute bladder; {0,1}
+@attribute provided {0,1}
+@attribute dehydrated {0,1}
+@attribute malaise {0,1}
+@attribute pharyngitis {0,1}
+@attribute voids {0,1}
+@attribute obstructions {0,1}
+@attribute times {0,1}
+@attribute hydronephrosis; {0,1}
+@attribute viral {0,1}
+@attribute 17-year {0,1}
+@attribute 21-day {0,1}
+@attribute 13-day {0,1}
+@attribute hydronephrotic {0,1}
+@attribute fibrosis {0,1}
+@attribute reactive {0,1}
+@attribute frequency {0,1}
+@attribute wiedemann {0,1}
+@attribute beckwith {0,1}
+@attribute asthma {0,1}
+@attribute mediastinum {0,1}
+@attribute xray {0,1}
+@attribute confluence {0,1}
+@attribute veins {0,1}
+@attribute pyloroplasty {0,1}
+@attribute emesis {0,1}
+@attribute hyperdense {0,1}
+@attribute causing {0,1}
+@attribute nonobstructing {0,1}
+@attribute suspicious {0,1}
+@attribute reevaluate {0,1}
+@attribute hematuria {0,1}
+@attribute gastrocystoplasty {0,1}
+@attribute reimplants {0,1}
+@attribute reconstruction {0,1}
+@attribute wires {0,1}
+@attribute device {0,1}
+@attribute amplatzer {0,1}
+@attribute sternotomy {0,1}
+@attribute positive {0,1}
+@attribute ppd {0,1}
+@attribute syndrome {0,1}
+@attribute yearly {0,1}
+@attribute improved {0,1}
+@attribute neurogenic {0,1}
+@attribute wheezing {0,1}
+@attribute cystic {0,1}
+@attribute williams {0,1}
+@attribute tumors {0,1}
+@attribute hemihypertrophy {0,1}
+@attribute hydroureter {0,1}
+@attribute slightly {0,1}
+@attribute horseshoe {0,1}
+@attribute myelomeningocele {0,1}
+@attribute specifically {0,1}
+@attribute referred {0,1}
+@attribute abdominal {0,1}
+@attribute initial {0,1}
+@attribute enuresis {0,1}
+@attribute discussion {0,1}
+@attribute lucent {0,1}
+@attribute rate {0,1}
+@attribute reviewing {0,1}
+@attribute rhonchi {0,1}
+@attribute 3mm {0,1}
+@attribute presumed {0,1}
+@attribute retractions {0,1}
+@attribute intercostal {0,1}
+@attribute evident {0,1}
+@attribute retained {0,1}
+@attribute plate {0,1}
+@attribute focal {0,1}
+@attribute meningomyelocele {0,1}
+@attribute artifact {0,1}
+@attribute aspirating {0,1}
+@attribute seat {0,1}
+@attribute talks {0,1}
+@attribute car {0,1}
+@attribute calms {0,1}
+@attribute hypoventilation {0,1}
+@attribute breathlessness {0,1}
+@attribute catches {0,1}
+@attribute funny {0,1}
+@attribute mom {0,1}
+@attribute sudden {0,1}
+@attribute sleeping {0,1}
+@attribute gasps {0,1}
+@attribute mass {0,1}
+@attribute complication {0,1}
+@attribute anomalies {0,1}
+@attribute hypertrophy {0,1}
+@attribute surgically {0,1}
+@attribute complex {0,1}
+@attribute compensatory {0,1}
+@attribute tb {0,1}
+@attribute pyelectasis {0,1}
+@attribute 101 {0,1}
+@attribute cystograms {0,1}
+@attribute discontinued {0,1}
+@attribute antibiotic {0,1}
+@attribute laboratory {0,1}
+@attribute suppressive {0,1}
+@attribute 3-year-10-month {0,1}
+@attribute x2 {0,1}
+@attribute correlate {0,1}
+@attribute complications {0,1}
+@attribute traction {0,1}
+@attribute ureterectasis {0,1}
+@attribute coli {0,1}
+@attribute difficult {0,1}
+@attribute confirmed {0,1}
+@attribute bertin {0,1}
+@attribute residua {0,1}
+@attribute column {0,1}
+@attribute uncomplicated {0,1}
+@attribute measurement {0,1}
+@attribute lumbar {0,1}
+@attribute measure {0,1}
+@attribute disease {0,1}
+@attribute tubes {0,1}
+@attribute lines {0,1}
+@attribute arrest {0,1}
+@attribute waning {0,1}
+@attribute waxing {0,1}
+@attribute standing {0,1}
+@attribute supporting {0,1}
+@attribute long {0,1}
+@attribute favor {0,1}
+@attribute muscular {0,1}
+@attribute image {0,1}
+@attribute atrophy {0,1}
+@attribute information {0,1}
+@attribute variable {0,1}
+@attribute spinal {0,1}
+@attribute interstitial {0,1}
+@attribute cf {0,1}
+@attribute allowing {0,1}
+@attribute volumes; {0,1}
+@attribute aeration {0,1}
+@attribute significantly {0,1}
+@attribute checkup {0,1}
+@attribute 6-year-11-month {0,1}
+@attribute anniversary {0,1}
+@attribute mm {0,1}
+@attribute ovary {0,1}
+@attribute simple {0,1}
+@attribute give {0,1}
+@attribute hemorrhagic {0,1}
+@attribute clean {0,1}
+@attribute trabeculation {0,1}
+@attribute diameter {0,1}
+@attribute exceeds {0,1}
+@attribute threshold {0,1}
+@attribute lumen {0,1}
+@attribute nephrolithiasis {0,1}
+@attribute 38 {0,1}
+@attribute similarly {0,1}
+@attribute cough {0,1}
+@attribute reflux {0,1}
+@attribute tuberculosis {0,1}
+@attribute adopted {0,1}
+@attribute active {0,1}
+@attribute ureteropelvic {0,1}
+@attribute quadrant {0,1}
+@attribute loops {0,1}
+@attribute fever {0,1}
+@attribute pneumothorax {0,1}
+@attribute flank {0,1}
+@attribute uganda {0,1}
+@attribute rankins {0,1}
+@attribute disease; {0,1}
+@attribute bcg {0,1}
+@attribute reaction {0,1}
+@attribute test {0,1}
+@attribute sputum {0,1}
+@attribute worthwhile {0,1}
+@attribute 12-month {0,1}
+@attribute skin {0,1}
+@attribute reactor {0,1}
+@attribute denise {0,1}
+@attribute films {0,1}
+@attribute secretions {0,1}
+@attribute wheeze {0,1}
+@attribute dilation {0,1}
+@attribute micturition {0,1}
+@attribute kidney; {0,1}
+@attribute nephrocalcinosis {0,1}
+@attribute pituitary {0,1}
+@attribute standards {0,1}
+@attribute end {0,1}
+@attribute trauma {0,1}
+@attribute glomerulonephritis {0,1}
+@attribute feel {0,1}
+@attribute bedwetting {0,1}
+@attribute 8-year-9-month {0,1}
+@attribute calcium {0,1}
+@attribute beginning {0,1}
+@attribute effusion {0,1}
+@attribute addition {0,1}
+@attribute yesterday {0,1}
+@attribute underlying {0,1}
+@attribute sonogram {0,1}
+@attribute full {0,1}
+@attribute vomiting {0,1}
+@attribute place {0,1}
+@attribute repaired {0,1}
+@attribute newborn {0,1}
+@attribute diagnosis {0,1}
+@attribute breath {0,1}
+@attribute hit {0,1}
+@attribute school {0,1}
+@attribute basketball {0,1}
+@attribute compressing {0,1}
+@attribute stuffy {0,1}
+@attribute vascular {0,1}
+@attribute asthmatic {0,1}
+@attribute barium {0,1}
+@attribute pneumomediastinum {0,1}
+@attribute pulmonologist {0,1}
+@attribute aortic {0,1}
+@attribute noisy {0,1}
+@attribute arch {0,1}
+@attribute call {0,1}
+@attribute bronchiolitis {0,1}
+@attribute 6-month-6-day {0,1}
+@attribute dictation {0,1}
+@attribute double {0,1}
+@attribute fellow- {0,1}
+@attribute ring {0,1}
+@attribute swallow {0,1}
+@attribute tracheomalacia {0,1}
+@attribute head {0,1}
+@attribute 8-year-2-month {0,1}
+@attribute wheezing/ {0,1}
+@attribute anomaly {0,1}
+@attribute pleural {0,1}
+@attribute 2; {0,1}
+@attribute anuresis {0,1}
+@attribute vesicoureteral {0,1}
+@attribute incontinence {0,1}
+@attribute hydronephrosis {0,1}
+@attribute pain {0,1}
+@attribute calculi {0,1}
+@attribute partially {0,1}
+@attribute proximal {0,1}
+@attribute measures {0,1}
+@attribute larger {0,1}
+@attribute vesicular {0,1}
+@attribute valves {0,1}
+@attribute transient {0,1}
+@attribute moderately {0,1}
+@attribute resolved {0,1}
+@attribute crackles {0,1}
+@attribute worsening {0,1}
+@attribute recommendation {0,1}
+@attribute 9-day {0,1}
+@attribute varies {0,1}
+@attribute assessing {0,1}
+@attribute removed {0,1}
+@attribute 4-year-3-month {0,1}
+@attribute ureteroceles {0,1}
+@attribute clot {0,1}
+@attribute pelves {0,1}
+@attribute parent {0,1}
+@attribute tortuous {0,1}
+@attribute determine {0,1}
+@attribute management {0,1}
+@attribute ectasia {0,1}
+@attribute cries {0,1}
+@attribute urologic {0,1}
+@attribute behavior {0,1}
+@attribute intermittently {0,1}
+@attribute valuable {0,1}
+@attribute familiar {0,1}
+@attribute informative {0,1}
+@attribute fracture {0,1}
+@attribute falling {0,1}
+@attribute hodgkin {0,1}
+@attribute 14 {0,1}
+@attribute elbowed {0,1}
+@attribute resultant {0,1}
+@attribute fell {0,1}
+@attribute boy {0,1}
+@attribute cell {0,1}
+@attribute breaths {0,1}
+@attribute practice {0,1}
+@attribute plain {0,1}
+@attribute bibasilar {0,1}
+@attribute dedicated {0,1}
+@attribute detailed {0,1}
+@attribute insufficient {0,1}
+@attribute chair {0,1}
+@attribute contour {0,1}
+@attribute coffee {0,1}
+@attribute table {0,1}
+@attribute technique {0,1}
+@attribute sternal {0,1}
+@attribute running {0,1}
+@attribute sickle {0,1}
+@attribute scoliosis {0,1}
+@attribute segmentation {0,1}
+@attribute tenting {0,1}
+@attribute features {0,1}
+@attribute mound {0,1}
+@attribute perineum {0,1}
+@attribute emptying {0,1}
+@attribute 28 {0,1}
+@attribute 4-year-8-month {0,1}
+@attribute 4-year-11-month {0,1}
+@attribute parents {0,1}
+@attribute 12-year-7-month {0,1}
+@attribute redness {0,1}
+@attribute urachus {0,1}
+@attribute r=9 {0,1}
+@attribute r9 {0,1}
+@attribute 134 {0,1}
+@attribute dry {0,1}
+@attribute kilograms {0,1}
+@attribute foster {0,1}
+@attribute l10 {0,1}
+@attribute artificial {0,1}
+@attribute hypoplastic {0,1}
+@attribute incomplete {0,1}
+@attribute nights {0,1}
+@attribute omphalocele {0,1}
+@attribute nocturnal {0,1}
+@attribute 85-month {0,1}
+@attribute l=9 {0,1}
+@attribute 7-1/2-year {0,1}
+@attribute burning {0,1}
+@attribute rotation {0,1}
+@attribute 0cm {0,1}
+@attribute reports {0,1}
+@attribute row {0,1}
+@attribute foci {0,1}
+@attribute injury {0,1}
+@attribute catheterization {0,1}
+@attribute sonographically {0,1}
+@attribute higher {0,1}
+@attribute shadow {0,1}
+@attribute helpful {0,1}
+@attribute spina {0,1}
+@attribute bifida {0,1}
+@attribute grade {0,1}
+@attribute prenatal {0,1}
+@attribute junction {0,1}
+@attribute spasm {0,1}
+@attribute patchiness {0,1}
+@attribute fluffy {0,1}
+@attribute resolving {0,1}
+@attribute outpatient {0,1}
+@attribute setting {0,1}
+@attribute broncho {0,1}
+@attribute acquired {0,1}
+@attribute 7-year-4-month {0,1}
+@attribute mason {0,1}
+@attribute feeling {0,1}
+@attribute organism {0,1}
+@attribute adults {0,1}
+@attribute hazy {0,1}
+@attribute 2-year-3-month {0,1}
+@attribute immediately {0,1}
+@attribute house {0,1}
+@attribute hospital {0,1}
+@attribute paratracheal {0,1}
+@attribute pneumonias {0,1}
+@attribute bethesda {0,1}
+@attribute suspicion {0,1}
+@attribute 21-year {0,1}
+@attribute 90s {0,1}
+@attribute pneumococcal {0,1}
+@attribute smoking {0,1}
+@attribute 9-year-1-month {0,1}
+@attribute 11-1/2-year {0,1}
+@attribute zithromax {0,1}
+@attribute community {0,1}
+@attribute saturations {0,1}
+@attribute remainder {0,1}
+@attribute calculus {0,1}
+@attribute stones {0,1}
+@attribute tract {0,1}
+@attribute ii {0,1}
+@attribute ct {0,1}
+@attribute discovered {0,1}
+@attribute calcification {0,1}
+@attribute 16 {0,1}
+@attribute calcifications {0,1}
+@attribute final {0,1}
+@attribute caudal {0,1}
+@attribute change; {0,1}
+@attribute brain {0,1}
+@attribute caused {0,1}
+@attribute regression {0,1}
+@attribute notable {0,1}
+@attribute trabeculations {0,1}
+@attribute irregularity {0,1}
+@attribute grossly {0,1}
+@attribute function {0,1}
+@attribute 1-1/2-year {0,1}
+@attribute demonstrating {0,1}
+@attribute thinned {0,1}
+@attribute epispadias {0,1}
+@attribute case {0,1}
+@attribute cord {0,1}
+@attribute uncertain {0,1}
+@attribute filling {0,1}
+@attribute punctate {0,1}
+@attribute increasing {0,1}
+@attribute gross {0,1}
+@attribute megaureter {0,1}
+@attribute microscopic {0,1}
+@attribute ribs {0,1}
+@attribute uti {0,1}
+@attribute persistent {0,1}
+@attribute years {0,1}
+@attribute urinary {0,1}
+@attribute augmentation {0,1}
+@attribute normal {0,1}
+@attribute loss {0,1}
+@attribute urethral {0,1}
+@attribute previous {0,1}
+@attribute nuclear {0,1}
+@attribute completely {0,1}
+@attribute aspect {0,1}
+@attribute stone {0,1}
+@attribute evaluation {0,1}
+@attribute urogenital {0,1}
+@attribute length {0,1}
+@attribute 102 {0,1}
+@attribute today {0,1}
+@attribute pelvicaliceal {0,1}
+@attribute caliceal {0,1}
+@attribute worse {0,1}
+@attribute duplication {0,1}
+@attribute back {0,1}
+@attribute remain {0,1}
+@attribute ii-iii {0,1}
+@attribute range {0,1}
+@attribute mounds {0,1}
+@attribute medical {0,1}
+@attribute respiratory {0,1}
+@attribute worrisome {0,1}
+@attribute fevers {0,1}
+@attribute process {0,1}
+@attribute colon {0,1}
+@attribute stool {0,1}
+@attribute pyeloplasty {0,1}
+@attribute scar {0,1}
+@attribute 9; {0,1}
+@attribute infant {0,1}
+@attribute cul-de-sac {0,1}
+@attribute stomach {0,1}
+@attribute obstruction {0,1}
+@attribute dysuria {0,1}
+@attribute asymptomatic {0,1}
+@attribute onset {0,1}
+@attribute development {0,1}
+@attribute opacity {0,1}
+@attribute - {0,1}
+@attribute 8-year {0,1}
+@attribute subsegmental {0,1}
+@attribute partial {0,1}
+@attribute hydroureteronephrosis {0,1}
+@attribute cloacal {0,1}
+@attribute decompression {0,1}
+@attribute dysplastic {0,1}
+@attribute ureterostomy {0,1}
+@attribute markedly {0,1}
+@attribute source {0,1}
+@attribute thirteen {0,1}
+@attribute sharp {0,1}
+@attribute 18-month {0,1}
+@attribute flattened {0,1}
+@attribute prolonged {0,1}
+@attribute convex {0,1}
+@attribute rales {0,1}
+@attribute retrocardiac {0,1}
+@attribute diaphragms {0,1}
+@attribute minimally {0,1}
+@attribute nondistended {0,1}
+@attribute medication {0,1}
+@attribute 5th {0,1}
+@attribute 591 {0,1}
+@attribute 0; {0,1}
+@attribute tear {0,1}
+@attribute 04 {0,1}
+@attribute failure {0,1}
+@attribute fourchette {0,1}
+@attribute vacuum {0,1}
+@attribute urgency {0,1}
+@attribute flattening {0,1}
+@attribute fire {0,1}
+@attribute daily {0,1}
+@attribute date {0,1}
+@attribute complaining {0,1}
+@attribute cystourethrogram {0,1}
+@attribute ureteric {0,1}
+@attribute echogenicity {0,1}
+@attribute dating {0,1}
+@attribute determined {0,1}
+@attribute toxic {0,1}
+@attribute jets {0,1}
+@attribute junctional {0,1}
+@attribute interobserver {0,1}
+@attribute intrinsically {0,1}
+@attribute spurious {0,1}
+@attribute spring {0,1}
+@attribute ruled {0,1}
+@attribute start {0,1}
+@attribute l=10 {0,1}
+@attribute basis {0,1}
+@attribute grown {0,1}
+@attribute vagina {0,1}
+@attribute variability {0,1}
+@attribute globally {0,1}
+@attribute continued {0,1}
+@attribute insertions {0,1}
+@attribute bactrim {0,1}
+@attribute vesicoureteric {0,1}
+@attribute atrophic {0,1}
+@attribute preoperative {0,1}
+@attribute placements {0,1}
+@attribute scheduled {0,1}
+@attribute r=10 {0,1}
+@attribute received {0,1}
+@attribute parallel {0,1}
+@attribute purpose {0,1}
+@attribute re-implant {0,1}
+@attribute possibility {0,1}
+@attribute opens {0,1}
+@attribute showing {0,1}
+@attribute re-implantation {0,1}
+@attribute decreased {0,1}
+@attribute febrile {0,1}
+@attribute infection {0,1}
+@attribute night {0,1}
+@attribute visible {0,1}
+@attribute admitted {0,1}
+@attribute concentric {0,1}
+@attribute term {0,1}
+@attribute positioning {0,1}
+@attribute r=5 {0,1}
+@attribute extension {0,1}
+@attribute hypoechoic {0,1}
+@attribute caliber {0,1}
+@attribute potty {0,1}
+@attribute accidents {0,1}
+@attribute trained {0,1}
+@attribute meatal {0,1}
+@attribute habitus {0,1}
+@attribute 2-year-9-month {0,1}
+@attribute contralateral {0,1}
+@attribute maximal {0,1}
+@attribute incidental {0,1}
+@attribute 4-year-4-month {0,1}
+@attribute 90th {0,1}
+@attribute adherent {0,1}
+@attribute siblings {0,1}
+@attribute functional {0,1}
+@attribute uroepithelial {0,1}
+@attribute retroperitoneal {0,1}
+@attribute progressive {0,1}
+@attribute chronological {0,1}
+@attribute issue {0,1}
+@attribute polyp {0,1}
+@attribute periphery {0,1}
+@attribute poles {0,1}
+@attribute charts {0,1}
+@attribute peristalsis {0,1}
+@attribute childs {0,1}
+@attribute objected {0,1}
+@attribute cystography {0,1}
+@attribute unclear {0,1}
+@attribute scanning {0,1}
+@attribute kidneys; {0,1}
+@attribute nonfebrile {0,1}
+@attribute 105 {0,1}
+@attribute l=6 {0,1}
+@attribute collapsed {0,1}
+@attribute intact {0,1}
+@attribute asymmetrically {0,1}
+@attribute real {0,1}
+@attribute infection; {0,1}
+@attribute seizure {0,1}
+@attribute mucosal {0,1}
+@attribute hydrational {0,1}
+@attribute structural {0,1}
+@attribute resolves {0,1}
+@attribute nephropathy {0,1}
+@attribute airspace {0,1}
+@attribute procedure {0,1}
+@attribute trabeculated {0,1}
+@attribute enlargement {0,1}
+@attribute moiety {0,1}
+@attribute dated {0,1}
+@attribute complete {0,1}
+@attribute expected {0,1}
+@attribute nonobstructive {0,1}
+@attribute physician {0,1}
+@attribute lesion {0,1}
+@attribute radiographically {0,1}
+@attribute rib {0,1}
+@attribute 104 {0,1}
+@attribute duplicated {0,1}
+@attribute probable {0,1}
+@attribute episodes {0,1}
+@attribute intraoperative {0,1}
+@attribute persistently {0,1}
+@attribute period {0,1}
+@attribute stump {0,1}
+@attribute intraabdominal {0,1}
+@attribute structures {0,1}
+@attribute reanastomosis {0,1}
+@attribute drained {0,1}
+@attribute diminished {0,1}
+@attribute distorted {0,1}
+@attribute emergency {0,1}
+@attribute calyx {0,1}
+@attribute catheter {0,1}
+@attribute ureteropyeloplasty {0,1}
+@attribute department {0,1}
+@attribute 12-day {0,1}
+@attribute corticomedullary {0,1}
+@attribute relative {0,1}
+@attribute differential {0,1}
+@attribute differentiation {0,1}
+@attribute clinic {0,1}
+@attribute record {0,1}
+@attribute connect {0,1}
+@attribute hemangioma {0,1}
+@attribute preservation {0,1}
+@attribute grades {0,1}
+@attribute poor {0,1}
+@attribute subsequent {0,1}
+@attribute augmented {0,1}
+@attribute hydrated {0,1}
+@attribute calix {0,1}
+@attribute 17-day {0,1}
+@attribute ureteroureterostomy {0,1}
+@attribute congenital {0,1}
+@attribute filed {0,1}
+@attribute procedures {0,1}
+@attribute pyeloplastys {0,1}
+@attribute revealed {0,1}
+@attribute liver {0,1}
+@attribute 9-month-30-day {0,1}
+@attribute palmer {0,1}
+@attribute margin {0,1}
+@attribute megaureters {0,1}
+@attribute site {0,1}
+@attribute number {0,1}
+@attribute interventional {0,1}
+@attribute effusions {0,1}
+@attribute x5 {0,1}
+@attribute 21 {0,1}
+@attribute paranasal {0,1}
+@attribute treatment {0,1}
+@attribute attempted {0,1}
+@attribute positional {0,1}
+@attribute elevated {0,1}
+@attribute incidentally {0,1}
+@attribute close {0,1}
+@attribute creates {0,1}
+@attribute 5-month-19-day {0,1}
+@attribute significance {0,1}
+@attribute unknown {0,1}
+@attribute gaseous {0,1}
+@attribute silhouetting {0,1}
+@attribute surgical {0,1}
+@attribute thorax {0,1}
+@attribute triangular {0,1}
+@attribute 1-1/2 {0,1}
+@attribute 22-day {0,1}
+@attribute aerated {0,1}
+@attribute borne {0,1}
+@attribute localized {0,1}
+@attribute vague {0,1}
+@attribute costophrenic {0,1}
+@attribute origin {0,1}
+@attribute developing {0,1}
+@attribute white {0,1}
+@attribute curve {0,1}
+@attribute 21-month {0,1}
+@attribute alternatively {0,1}
+@attribute raising {0,1}
+@attribute regions {0,1}
+@attribute 15-month {0,1}
+@attribute amenable {0,1}
+@attribute count {0,1}
+@attribute 1-year-1-month {0,1}
+@attribute assess {0,1}
+@attribute margins {0,1}
+@attribute sequela {0,1}
+@attribute Class-0-593_70 {0,1}
+@attribute Class-1-079_99 {0,1}
+@attribute Class-2-786_09 {0,1}
+@attribute Class-3-759_89 {0,1}
+@attribute Class-4-753_0 {0,1}
+@attribute Class-5-786_2 {0,1}
+@attribute Class-6-V72_5 {0,1}
+@attribute Class-7-511_9 {0,1}
+@attribute Class-8-596_8 {0,1}
+@attribute Class-9-599_0 {0,1}
+@attribute Class-10-518_0 {0,1}
+@attribute Class-11-593_5 {0,1}
+@attribute Class-12-V13_09 {0,1}
+@attribute Class-13-791_0 {0,1}
+@attribute Class-14-789_00 {0,1}
+@attribute Class-15-593_1 {0,1}
+@attribute Class-16-462 {0,1}
+@attribute Class-17-592_0 {0,1}
+@attribute Class-18-786_59 {0,1}
+@attribute Class-19-785_6 {0,1}
+@attribute Class-20-V67_09 {0,1}
+@attribute Class-21-795_5 {0,1}
+@attribute Class-22-789_09 {0,1}
+@attribute Class-23-786_50 {0,1}
+@attribute Class-24-596_54 {0,1}
+@attribute Class-25-787_03 {0,1}
+@attribute Class-26-V42_0 {0,1}
+@attribute Class-27-786_05 {0,1}
+@attribute Class-28-753_21 {0,1}
+@attribute Class-29-783_0 {0,1}
+@attribute Class-30-277_00 {0,1}
+@attribute Class-31-780_6 {0,1}
+@attribute Class-32-486 {0,1}
+@attribute Class-33-788_41 {0,1}
+@attribute Class-34-V13_02 {0,1}
+@attribute Class-35-493_90 {0,1}
+@attribute Class-36-788_30 {0,1}
+@attribute Class-37-753_3 {0,1}
+@attribute Class-38-593_89 {0,1}
+@attribute Class-39-758_6 {0,1}
+@attribute Class-40-741_90 {0,1}
+@attribute Class-41-591 {0,1}
+@attribute Class-42-599_7 {0,1}
+@attribute Class-43-279_12 {0,1}
+@attribute Class-44-786_07 {0,1}
+
+@data
+{25 1,188 1,448 1,489 1,728 1}
+{189 1,443 1,448 1,489 1,733 1}
+{25 1,272 1,489 1,747 1}
+{13 1,188 1,196 1,239 1,489 1,728 1,751 1}
+{25 1,188 1,448 1,489 1,728 1}
+{75 1,84 1,448 1,748 1}
+{75 1,126 1,372 1,373 1,489 1,748 1,760 1}
+{26 1,211 1,626 1,755 1}
+{70 1,102 1,196 1,401 1,489 1,756 1}
+{25 1,38 1,272 1,448 1,489 1,706 1,747 1}
+{62 1,126 1,448 1,760 1,767 1}
+{76 1,188 1,238 1,318 1,463 1,488 1,489 1,655 1,728 1,768 1}
+{25 1,188 1,266 1,366 1,448 1,728 1}
+{74 1,82 1,271 1,625 1,765 1}
+{411 1,446 1,448 1,733 1}
+{75 1,372 1,373 1,448 1,489 1,748 1}
+{25 1,188 1,326 1,489 1,728 1}
+{443 1,448 1,489 1,733 1}
+{25 1,46 1,76 1,149 1,448 1,758 1}
+{40 1,46 1,76 1,102 1,149 1,165 1,471 1,489 1,768 1}
+{62 1,441 1,448 1,767 1}
+{126 1,271 1,448 1,760 1,765 1}
+{10 1,40 1,46 1,102 1,149 1,196 1,565 1,756 1}
+{196 1,755 1}
+{189 1,269 1,374 1,448 1,452 1,489 1,490 1,724 1}
+{25 1,76 1,188 1,448 1,728 1,768 1}
+{160 1,189 1,269 1,271 1,451 1,621 1,724 1}
+{188 1,211 1,728 1}
+{75 1,434 1,489 1,748 1,763 1}
+{189 1,411 1,446 1,448 1,489 1,565 1,733 1}
+{189 1,411 1,446 1,448 1,489 1,564 1,565 1,733 1}
+{189 1,411 1,446 1,448 1,565 1,733 1}
+{188 1,489 1,728 1}
+{10 1,40 1,46 1,102 1,149 1,196 1,489 1,491 1,734 1}
+{10 1,40 1,46 1,149 1,188 1,196 1,333 1,489 1,728 1,756 1,758 1}
+{271 1,448 1,489 1,765 1}
+{7 1,10 1,25 1,46 1,50 1,76 1,149 1,758 1}
+{755 1}
+{189 1,269 1,374 1,448 1,724 1}
+{121 1,124 1,189 1,196 1,220 1,269 1,374 1,443 1,448 1,489 1,530 1,625 1,633 1,724 1,739 1}
+{25 1,188 1,196 1,448 1,728 1,756 1}
+{25 1,76 1,448 1,489 1,768 1}
+{62 1,441 1,448 1,489 1,767 1}
+{81 1,271 1,448 1,765 1}
+{70 1,71 1,202 1,211 1,448 1,485 1,745 1}
+{76 1,102 1,188 1,488 1,728 1,768 1}
+{40 1,46 1,76 1,102 1,149 1,188 1,489 1,565 1,728 1,768 1}
+{25 1,197 1,272 1,309 1,442 1,448 1,747 1}
+{189 1,269 1,374 1,411 1,412 1,446 1,448 1,452 1,489 1,565 1,724 1,733 1}
+{443 1,448 1,489 1,733 1}
+{75 1,217 1,653 1,656 1,748 1,760 1}
+{25 1,188 1,251 1,448 1,728 1}
+{40 1,46 1,149 1,188 1,196 1,228 1,266 1,448 1,466 1,501 1,708 1,728 1,756 1}
+{86 1,271 1,273 1,446 1,448 1,477 1,489 1,765 1}
+{62 1,411 1,446 1,448 1,767 1}
+{411 1,446 1,448 1,489 1,565 1,733 1}
+{75 1,84 1,271 1,748 1,765 1}
+{80 1,87 1,90 1,118 1,231 1,277 1,448 1,489 1,725 1}
+{411 1,446 1,448 1,489 1,565 1,733 1}
+{41 1,188 1,489 1,728 1}
+{374 1,448 1,489 1,724 1}
+{189 1,269 1,374 1,448 1,621 1,724 1}
+{75 1,273 1,748 1}
+{10 1,76 1,149 1,196 1,768 1}
+{189 1,269 1,448 1,451 1,489 1,621 1,736 1}
+{100 1,270 1,411 1,446 1,448 1,543 1,762 1}
+{25 1,272 1,448 1,747 1}
+{188 1,489 1,490 1,755 1}
+{75 1,372 1,373 1,448 1,748 1}
+{188 1,451 1,728 1}
+{411 1,446 1,448 1,733 1}
+{75 1,448 1,489 1,748 1}
+{76 1,246 1,448 1,768 1}
+{81 1,189 1,289 1,374 1,649 1,664 1,724 1,735 1}
+{45 1,77 1,149 1,754 1}
+{25 1,272 1,448 1,689 1,747 1}
+{126 1,189 1,269 1,374 1,426 1,448 1,489 1,615 1,724 1,760 1}
+{2 1,72 1,102 1,134 1,188 1,196 1,489 1,525 1,728 1,766 1}
+{189 1,448 1,724 1}
+{84 1,427 1,448 1,763 1}
+{10 1,40 1,46 1,149 1,188 1,196 1,333 1,489 1,758 1}
+{102 1,188 1,489 1,734 1}
+{75 1,271 1,563 1,748 1,765 1}
+{196 1,448 1,756 1}
+{102 1,188 1,196 1,728 1,756 1}
+{149 1,189 1,374 1,470 1,496 1,724 1}
+{81 1,189 1,269 1,448 1,724 1}
+{75 1,448 1,456 1,489 1,625 1,695 1,696 1,748 1}
+{45 1,73 1,77 1,448 1,482 1,754 1}
+{189 1,271 1,374 1,375 1,448 1,489 1,626 1,724 1}
+{83 1,146 1,220 1,276 1,333 1,448 1,624 1,761 1}
+{189 1,269 1,374 1,449 1,489 1,621 1,724 1}
+{76 1,102 1,188 1,228 1,266 1,448 1,489 1,728 1,768 1}
+{102 1,189 1,269 1,489 1,724 1}
+{102 1,277 1,411 1,446 1,489 1,565 1,733 1}
+{25 1,196 1,448 1,756 1}
+{76 1,102 1,196 1,756 1,768 1}
+{411 1,446 1,480 1,564 1,565 1,733 1}
