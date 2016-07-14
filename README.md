@@ -4,7 +4,7 @@ by [Francisco Herrera](https://scholar.google.es/citations?hl=es&user=HULIk-QAAA
 
 [Springer](http://www.springer.com/gp/book/9783319411101), 2016.
 
-![Book Cover](Resources/BookCover.png)
+[![Book Cover](Resources/BookCover.png)](http://www.springer.com/gp/book/9783319411101)
 
 This repository provides the multilabel datasets used throughout the chapters of the book *Multilabel Classification - Problem analysis, metrics and techniques*, as well as some code and links. Click the folder corresponding the chapters (in the list above) to download the files you are interested in. You can also clone the entire repository, as well as to download it as a ZIP file.
 
