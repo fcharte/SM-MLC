@@ -18,3 +18,49 @@ This book offers a comprehensive review of multilabel techniques widely used to 
 + The available software tools to work with multi-label data.
 
 This book is beneficial for professionals and researchers in a variety of fields because of the wide range of potential applications for multilabel classification. Besides its multiple applications to classify different types of online information, it is also useful in many other areas, such as genomics and biology. No previous knowledge about the subject is required. The book introduces all the needed concepts to understand multilabel data characterization, treatment and evaluation.
+
+# Links
+
+The following is a summary of links provided through the book. Each chapter's folder also contains the links which are relevant to the studied topic.
+
+## Data Repositories
+
+Most of the available multilabel datasets can be obtained from the following data repositories:
+
+[R Ultimate Multilabel Dataset Repository - RUMDR](https://github.com/fcharte/mldr.datasets/)
+
+[MULAN Data Repository](http://mulan.sourceforge.net/datasets.html)
+
+[MEKA Data Repository](http://sourceforge.net/projects/meka/files/Datasets/)
+
+[KEEL Multilabel Datasets](http://sci2s.ugr.es/keel/multilabel.php)
+
+[LibSVM Multilabel Datasets](http://www.csie.ntu.edu.tw/˜cjlin/libsvmtools/datasets/multilabel.html)
+
+[Extreme Classification Repository](http://research.microsoft.com/en-us/um/people/manik/downloads/XC/XMLRepository.html)
+
+## Tools
+
+The following are links to multilabel software tools:
+
+`mldr` R package at [CRAN](https://cran.r-project.org/web/packages/mldr/index.html) - [GitHub](https://github.com/fcharte/mldr/)
+
+`mldr.datasets` R package at [CRAN](https://cran.r-project.org/web/packages/mldr.datasets/index.html) - [GitHub](https://github.com/fcharte/mldr.datasets/)
+
+[MEKA Java software](https://adams.cms.waikato.ac.nz/snapshots/meka)
+
+[MULAN Java software](http://mulan.sourceforge.net)
+
+[Synthetic Dataset Generator for Multi-label Learning - Mldatagen](http://sites.labic.icmc.usp.br/mldatagen/)
+
+## Code / Programs
+
+[ML-TREE](https://sites.google.com/site/qysite) - Source code with the reference implementation of the ML-TREE algorithm
+
+[Rank-SVM](http://cse.seu.edu.cn/people/zhangml/files/RankSVM.rar) - Source code with the reference implementation of the Rank-SVM algorithm
+
+[MLSMOTE](http://simidat.ujaen.es/MLSMOTE) - Java implementation of the MLSMOTE algorithm
+
+[MLeNN](http://simidat.ujaen.es/papers/mlenn) - Java implementation of the MLeNN algorithm
+
+[REMEDIAL](https://github.com/fcharte/mldr/blob/master/demo/decouple.R) - R source code for the REMEDIAL algorithm
