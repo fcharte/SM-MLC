@@ -64,3 +64,7 @@ The following are links to multilabel software tools:
 [MLeNN](http://simidat.ujaen.es/papers/mlenn) - Java implementation of the MLeNN algorithm
 
 [REMEDIAL](https://github.com/fcharte/mldr/blob/master/demo/decouple.R) - R source code for the REMEDIAL algorithm
+
+# License
+
+This content is licensed under [LGPLv3](https://github.com/fcharte/SM-MLC/blob/master/LICENSE). [What does this mean?](https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3))
